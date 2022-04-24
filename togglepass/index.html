@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Password Show or Hide Toggle | CodeLab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="password" placeholder="Enter Password" required>
+      <span class="show-btn"><i class="fa fa-eye" aria-hidden="true"></i>
+      </span>
+    </div>
+    <script>
+      const passField = document.querySelector("input");
+      const showBtn = document.querySelector("span i");
+      showBtn.onclick = (()=>{
+        if(passField.type === "password"){
+          passField.type = "text";
+          showBtn.classList.add("hide-btn");
+        }else{
+          passField.type = "password";
+          showBtn.classList.remove("hide-btn");
+        }
+      });
+    </script>
+
+  </body>
+</html>
